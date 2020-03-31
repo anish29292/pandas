@@ -12,7 +12,6 @@ import pytz
 
 from pandas.compat import PY37, is_platform_little_endian
 from pandas.compat.numpy import _is_numpy_dev
-from pandas.conftest import empty_frame
 
 from pandas.core.dtypes.common import is_integer_dtype
 
@@ -31,6 +30,7 @@ from pandas import (
 )
 import pandas._testing as tm
 from pandas.arrays import IntervalArray, PeriodArray, SparseArray
+from pandas.conftest import empty_frame
 from pandas.core.construction import create_series_with_explicit_dtype
 
 MIXED_FLOAT_DTYPES = ["float16", "float32", "float64"]

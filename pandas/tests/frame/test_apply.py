@@ -100,12 +100,12 @@ class TestDataFrameApply:
 
     def test_apply_with_reduce_empty(self):
         # reduce with an empty DataFrame
-        empty_frame = empty_frame()
+        empty_frame_ = empty_frame()
 
         x = []
-        result = empty_frame.apply(x.append, axis=1, result_type="expand")
-        tm.assert_frame_equal(result, empty_frame)
-        result = empty_frame.apply(x.append, axis=1, result_type="reduce")
+        result = empty_frame_.apply(x.append, axis=1, result_type="expand")
+        tm.assert_frame_equal(result, empty_frame_)
+        result = empty_frame_.apply(x.append, axis=1, result_type="reduce")
         expected = Series([], index=pd.Index([], dtype=object), dtype=np.float64)
         tm.assert_series_equal(result, expected)
 

@@ -3,7 +3,6 @@ from io import StringIO
 import itertools
 
 import numpy as np
-import pytest
 
 import pandas as pd
 from pandas import (
@@ -16,6 +15,7 @@ from pandas import (
     option_context,
 )
 import pandas._testing as tm
+import pytest
 from pandas.conftest import empty_frame
 from pandas.core.arrays import IntervalArray, integer_array
 from pandas.core.internals import ObjectBlock
